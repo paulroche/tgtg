@@ -121,7 +121,7 @@ You can combine multiple crons as semicolon separated list.
 | Timeout | SMTP_TIMEOUT | set timeout in seconds | 60 | | |
 | Username | SMTP_USERNAME | login username | | | |
 | Password | SMTP_PASSWORD | login password | | | |
-| Sender | SMTP_SENDER | email sender | | | |
+| Sender | SMTP_SENDER | email sender | | YES | |
 | Recipients | SMTP_RECIPIENTS | email recipients | | YES | |
 | RecipientsPerItem | SMTP_RECIPIENTS_PER_ITEM | email recipients per item as JSON `{"ItemId_1": ["mail@example.com", ...], ...}` | | | |
 | Subject | SMTP_SUBJECT | email subject | `New Magic Bags` | | YES |
@@ -188,7 +188,7 @@ For details on the service URL configuration see <https://github.com/caronc/appr
 | Server | NTFY_SERVER | Ntfy server URL | `https://ntfy.sh` | YES | |
 | Topic | NTFY_TOPIC | Ntfy topic | | YES | |
 | Title | NTFY_TITLE | Notification title | `New TGTG items` | | YES |
-| Message | NTFY_MESSAGE | Notification message | `${{display_name}} - New Amount: ${{items_available}} - ${{itelinkm_id}}` | | YES |
+| Message | NTFY_MESSAGE | Notification message | `${{display_name}} - New Amount: ${{items_available}} - ${{link}}` | | YES |
 | Priority | NTFY_PRIORITY | | `default` | | |
 | Tags | NTFY_TAGS | comma-separated list of tags | `shopping,tgtg` | | YES |
 | Click | NTFY_CLICK | URL to open on click | `${{link}}` | | YES |
