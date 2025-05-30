@@ -141,6 +141,7 @@ class Scanner:
             if state_item.items_available == 0 and item.items_available > 0:
                 self._send_messages(item)
                 self.metrics.send_notifications.labels(item.item_id, item.display_name).inc()
+                self.metrics.items_count_total.labels(item.item_id, item.display_name).inc(item.items_available)
         self.metrics.update(item)
         self.state[item.item_id] = item
 

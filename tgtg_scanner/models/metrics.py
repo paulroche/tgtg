@@ -24,6 +24,11 @@ class Metrics:
             "Count of send notifications",
             ["item_id", "display_name"],
         )
+        self.items_count_total = Counter(
+            "tgtg_items_count",
+            "Total number of Magic Bags made available",
+            ["item_id", "display_name"],
+        )
 
     def enable_metrics(self) -> None:
         """Start the metrics http server."""
