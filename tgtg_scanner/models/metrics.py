@@ -26,6 +26,11 @@ class Metrics:
             "Count of send notifications",
             ["item_id", "display_name"],
         )
+        self.item_count_total = Counter(
+            "tgtg_item_count_total",
+            "Total number of Magic Bags made available",
+            ["item_id", "display_name"],
+        )
 
     def enable_metrics(self) -> None:
         """
